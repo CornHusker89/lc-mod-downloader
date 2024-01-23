@@ -9,6 +9,6 @@
 # if the value is "delete_existing_files", the program will delete all files in the directory in that step. This is recommended before downloading something to that folder (aka directory)
 
 instructions = [
-    ["*/BepInEx", "delete_existing_files"],
-    ["*/BepInEx", "https://drive.google.com/drive/folders/1rQFSuPN6yJ93KDOpy45J31OWcyDXZNal"]
+    ["C:\Program Files (x86)\Steam\steamapps\common\Lethal Company/BepInEx/plugins", "delete_existing_files"],
+    ["C:\Program Files (x86)\Steam\steamapps\common\Lethal Company/BepInEx/plugins", "https://drive.google.com/drive/folders/1rQFSuPN6yJ93KDOpy45J31OWcyDXZNal"]
 ]
