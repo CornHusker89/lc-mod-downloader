@@ -9,6 +9,14 @@ from links import instructions
 lc_path = ""
 if os.path.exists("C:\Program Files (x86)\Steam\steamapps\common\Lethal Company"):
     lc_path = "C:\Program Files (x86)\Steam\steamapps\common\Lethal Company"
+elif os.path.exists("D:\Program Files (x86)\Steam\steamapps\common\Lethal Company"):
+    lc_path = "D:\Program Files (x86)\Steam\steamapps\common\Lethal Company"
+elif os.path.exists("E:\Program Files (x86)\Steam\steamapps\common\Lethal Company"):
+    lc_path = "E:\Program Files (x86)\Steam\steamapps\common\Lethal Company"
+elif os.path.exists("F:\Program Files (x86)\Steam\steamapps\common\Lethal Company"):
+    lc_path = "F:\Program Files (x86)\Steam\steamapps\common\Lethal Company"
+elif os.path.exists("G:\Program Files (x86)\Steam\steamapps\common\Lethal Company"):
+    lc_path = "G:\Program Files (x86)\Steam\steamapps\common\Lethal Company" # if someone has past G: then they need to get their life together
 else:
     raise Exception("couldn't find Lethal Company directory")
 
