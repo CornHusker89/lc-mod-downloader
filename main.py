@@ -22,6 +22,10 @@ else:
 
 try:
     for line in instructions:
+
+        if not "*" in path:
+            raise Exception("DEBUG: path must contain a * (forward this error to rat and/or corn)")
+
         path = line[0].replace("*", lc_path)
         instruction = line[1]
 
