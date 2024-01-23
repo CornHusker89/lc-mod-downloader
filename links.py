@@ -6,7 +6,7 @@
 # the first value (the one before the ":") is the path to the directory
 # any "*" in the path will be replaced with the path to the Lethal Company directory
 # the second value (the one after the ":") is either a link to a google drive folder or an instruction
-# if the value is "delete_existing_files", the program will delete all files in the directory in that step
+# if the value is "delete_existing_files", the program will delete all files in the directory in that step. This is recommended before downloading something to that folder (aka directory)
 
 instructions = [
     ["*/BepInEx", "delete_existing_files"],
