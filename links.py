@@ -10,7 +10,7 @@
 
 instructions = [
     ["*/BepInEx/plugins", "delete_existing_files"],
-    ["*/BepInEx/plugins", "https://drive.google.com/drive/folders/1rQFSuPN6yJ93KDOpy45J31OWcyDXZNal"]
+    ["*/BepInEx/plugins", "https://drive.google.com/drive/folders/1262-goPA8VV0UDXHIeP8H9r6XFhaXziH"]
 ]
 
 #im very good at coding (mr ratzat here)
