@@ -9,8 +9,8 @@
 # if the value is "delete_existing_files", the program will delete all files in the directory in that step. This is recommended before downloading something to that folder (aka directory)
 
 instructions = [
-    ["*/Bepinex/plugins", "delete_existing_files"],
-    ["*/Bepinex/plugins", "https://drive.google.com/drive/folders/1rQFSuPN6yJ93KDOpy45J31OWcyDXZNal"]
+    ["*/BepInEx/plugins", "delete_existing_files"],
+    ["*/BepInEx/plugins", "https://drive.google.com/drive/folders/1rQFSuPN6yJ93KDOpy45J31OWcyDXZNal"]
 ]
 
 #im very good at coding (mr ratzat here)

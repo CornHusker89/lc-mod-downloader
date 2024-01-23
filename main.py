@@ -30,7 +30,9 @@ try:
             path = path.replace("\\", "/").replace("//", "/")
             directory_path_list = path.split("/")
 
-            if "BepInEx" in directory_path_list:
+            print(directory_path_list)
+
+            if not "BepInEx" in directory_path_list:
                 print("----------------------------------------")
                 response = input(f"WARNING: BepInEx did not exist before this script was ran. A BepInEx installation is required. Are you sure you want to continue? (say \"n\" if you don't know) (y/n) ")
                 if response == "y" or response == "Y" or response == "yes" or response == "Yes":
@@ -42,8 +44,9 @@ try:
                 if i == 0:
                     continue
                 directory_path = ""
-                for j in range(i):
+                for j in range(i + 1):
                     directory_path += directory_path_list[j] + "/"
+                print(directory_path)
                 if not os.path.exists(directory_path):
                     os.mkdir(directory_path)
 
