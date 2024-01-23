@@ -12,3 +12,5 @@ instructions = [
     ["*/Bepinex/plugins", "delete_existing_files"],
     ["*/Bepinex/plugins", "https://drive.google.com/drive/folders/1rQFSuPN6yJ93KDOpy45J31OWcyDXZNal"]
 ]
+
+#im very good at coding (mr ratzat here)
