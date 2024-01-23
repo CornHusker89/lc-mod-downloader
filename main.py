@@ -34,11 +34,11 @@ try:
 
             if not "BepInEx" in directory_path_list:
                 print("----------------------------------------")
-                response = input(f"WARNING: BepInEx did not exist before this script was ran. A BepInEx installation is required. Are you sure you want to continue? (say \"n\" if you don't know) (y/n) ")
+                response = input(f"WARNING: BepInEx did not exist before this was ran. A BepInEx installation is required. Are you sure you want to continue? (say \"n\" if you don't know) (y/n) ")
                 if response == "y" or response == "Y" or response == "yes" or response == "Yes":
                     pass
                 else:
-                    raise Exception("User cancelled installation")
+                    raise Exception("canceled by user")
 
             for i in range(len(directory_path_list)):
                 if i == 0:
