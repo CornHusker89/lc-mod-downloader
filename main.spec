@@ -6,7 +6,7 @@ a = Analysis(
     pathex=[],
     binaries=[],
     datas=[],
-    hiddenimports=['tiktoken_ext.openai_public', 'tiktoken_ext'],
+    hiddenimports=[],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -21,45 +21,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='sumzero',
-    debug=False,
-    bootloader_ignore_signals=False,
-    strip=False,
-    upx=True,
-    upx_exclude=[],
-    runtime_tmpdir=None,
-    console=True,
-    disable_windowed_traceback=False,
-    argv_emulation=False,
-    target_arch=None,
-    codesign_identity=None,
-    entitlements_file=None,
-    version="version.rc",
-    icon='NONE'
-)
-
-# Downloader
-downloader = Analysis(
-    ['downloader.py', 'version.py'],
-    pathex=[],
-    binaries=[],
-    datas=[],
-    hiddenimports=[],
-    hookspath=[],
-    hooksconfig={},
-    runtime_hooks=[],
-    excludes=[],
-    noarchive=False,
-)
-downloaderpyz = PYZ(downloader.pure)
-
-downloaderexe = EXE(
-    downloaderpyz,
-    downloader.scripts,
-    downloader.binaries,
-    downloader.datas,
-    [],
-    name='sumzero-dl',
+    name='lc-mod-downloader',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

@@ -17,8 +17,8 @@ VSVersionInfo(
                     StringStruct(u'FileDescription', u''),
                     StringStruct(u'FileVersion', u'24.10.2023'),
                     StringStruct(u'LegalCopyright', u'MIT License'),
-                    StringStruct(u'OriginalFilename', u'sumzero'),
-                    StringStruct(u'ProductName', u'rezero-summarizer'),
+                    StringStruct(u'OriginalFilename', u'lc-mod-downloader'),
+                    StringStruct(u'ProductName', u'lc-mod-downloader'),
                     StringStruct(u'ProductVersion', u'24.10.2023')
                 ]
             )
