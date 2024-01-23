@@ -1,6 +1,7 @@
 
 import gdown
 import os
+import shutil
 import traceback
 
 from links import instructions
@@ -16,11 +17,13 @@ try:
         path = line[0].replace("*", lc_path)
         instruction = line[1]
 
-        print(instruction)
         if instruction == "delete_existing_files":
             print(f"removing all files/directories in {path}")
-            for file in os.listdir(path):   
-                os.remove(path + "/" + file)
+            for file in os.listdir(path):
+                if os.path.isfile(path + "/" + file):
+                    os.remove(path + "/" + file)
+                else:
+                    shutil.rmtree(path + "/" + file)
         else:
             # download folders
             try:
