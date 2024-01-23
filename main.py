@@ -32,13 +32,33 @@ try:
                     os.remove(path + "/" + file)
                 else:
                     shutil.rmtree(path + "/" + file)
+
         else:
+            if not os.path.exists(path):
+                path = path.replace("\\", "/").replace("//", "/")
+                directory_path_list = path.split("/")
+
+                if "BepInEx" in directory_path_list:
+                    print("----------------------------------------")
+                    response = input(f"WARNING: BepInEx did not exist before this script was ran. A BepInEx installation is required. Are you sure you want to continue? (say \"n\" if you don't know) (y/n) ")
+                    if response == "y" or response == "Y" or response == "yes" or response == "Yes":
+                        pass
+                    else:
+                        raise Exception("User cancelled installation")
+
+                for i in range(len(directory_path_list)):
+                    if i == 0:
+                        continue
+                    directory_path = ""
+                    for j in range(i):
+                        directory_path += directory_path_list[j] + "/"
+                    if not os.path.exists(directory_path):
+                        os.mkdir(directory_path)
             # download folders
             try:
                 gdown.download_folder(url=instruction, output=path)
             except:
                 raise Exception(f"An error occured while downloading a folder with link {instruction} (make sure this is a valid and publicly accessable link). Error: {traceback.format_exc()}")
-
                 
 except Exception as e:
     print("An error occured:")
