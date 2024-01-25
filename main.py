@@ -6,25 +6,36 @@ import traceback
 
 from links import instructions
 
-lc_path = ""
-if os.path.exists("C:\Program Files (x86)\Steam\steamapps\common\Lethal Company"):
-    lc_path = "C:\Program Files (x86)\Steam\steamapps\common\Lethal Company"
-elif os.path.exists("D:\Program Files (x86)\Steam\steamapps\common\Lethal Company"):
-    lc_path = "D:\Program Files (x86)\Steam\steamapps\common\Lethal Company"
-elif os.path.exists("E:\Program Files (x86)\Steam\steamapps\common\Lethal Company"):
-    lc_path = "E:\Program Files (x86)\Steam\steamapps\common\Lethal Company"
-elif os.path.exists("F:\Program Files (x86)\Steam\steamapps\common\Lethal Company"):
-    lc_path = "F:\Program Files (x86)\Steam\steamapps\common\Lethal Company"
-elif os.path.exists("G:\Program Files (x86)\Steam\steamapps\common\Lethal Company"):
-    lc_path = "G:\Program Files (x86)\Steam\steamapps\common\Lethal Company" # if someone has past G: then they need to get their life together
-else:
-    raise Exception("couldn't find Lethal Company directory")
-
 try:
+
+    lc_path = ""
+    if os.path.exists("C:\Program Files (x86)\Steam\steamapps\common\Lethal Company"):
+        lc_path = "C:\Program Files (x86)\Steam\steamapps\common\Lethal Company"
+    elif os.path.exists("D:\Program Files (x86)\Steam\steamapps\common\Lethal Company"):
+        lc_path = "D:\Program Files (x86)\Steam\steamapps\common\Lethal Company"
+    elif os.path.exists("E:\Program Files (x86)\Steam\steamapps\common\Lethal Company"):
+        lc_path = "E:\Program Files (x86)\Steam\steamapps\common\Lethal Company"
+    elif os.path.exists("F:\Program Files (x86)\Steam\steamapps\common\Lethal Company"):
+        lc_path = "F:\Program Files (x86)\Steam\steamapps\common\Lethal Company"
+    elif os.path.exists("G:\Program Files (x86)\Steam\steamapps\common\Lethal Company"):
+        lc_path = "G:\Program Files (x86)\Steam\steamapps\common\Lethal Company" # if someone has past G: then they need to get their life together
+    if os.path.exists("C:\SteamLibrary\steamapps\common\Lethal Company"):
+        lc_path = "C:\SteamLibrary\steamapps\common\Lethal Company"
+    elif os.path.exists("D:\SteamLibrary\steamapps\common\Lethal Company"):
+        lc_path = "D:\SteamLibrary\steamapps\common\Lethal Company"
+    elif os.path.exists("E:\SteamLibrary\steamapps\common\Lethal Company"):
+        lc_path = "E:\SteamLibrary\steamapps\common\Lethal Company"
+    elif os.path.exists("F:\SteamLibrary\steamapps\common\Lethal Company"):
+        lc_path = "F:\SteamLibrary\steamapps\common\Lethal Company"
+    elif os.path.exists("G:\SteamLibrary\steamapps\common\Lethal Company"):
+        lc_path = "G:\SteamLibrary\steamapps\common\Lethal Company"
+    else:
+        raise Exception("couldn't find Lethal Company directory (forward this error to corn)")
+
     for line in instructions:
 
         if not "*" in line[0]:
-            raise Exception("DEBUG: path must contain a * (forward this error to rat and/or corn)")
+            raise Exception("instruction path must contain a * (forward this error to rat and/or corn)")
 
         path = line[0].replace("*", lc_path)
         instruction = line[1]
