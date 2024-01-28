@@ -80,7 +80,7 @@ try:
             except:
                 raise Exception(f"An error occured while downloading a folder with link {instruction} (make sure this is a valid and publicly accessable link). Error: {traceback.format_exc()}")
             
-        input("Mods successfully installed. Press enter to exit")
+    input("Mods successfully installed. Press enter to exit")
                 
 except Exception as e:
     print("An error occured:")
